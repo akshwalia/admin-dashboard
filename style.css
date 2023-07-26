@@ -2,7 +2,8 @@
     --color:#d35e3a;
 }
 body {
-    background-color: gray;
+    margin: 0px;
+    font-family: 'Roboto','Arial';
 }
 
 img {
@@ -10,14 +11,14 @@ img {
     border-radius: 50%;
 }
 svg {
-    width: 30px;
+    width: 28px;
     filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(306deg) brightness(101%) contrast(104%);
 }
 
 .container {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    gap: 10px;
+    grid-template-columns: 15% 60% 25%;
+    
 }
 
 .header {
@@ -25,16 +26,49 @@ svg {
     display: grid;
     grid-template-rows: repeat(2, 70px);
     background-color: white;
+    box-shadow: 0 2px 10px rgb(156, 156, 156) ;
 }
 
-input {
-    height: 30px;
+.header svg {
+    filter: none;
 }
 
 .headerTop {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.searchbar {
+    display: grid;
+    grid-template-columns: 20px minmax(300px,700px);
+    align-items: center;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+input {
+    border:1px solid rgb(161, 161, 161);
+    border-radius: 15px;
+    height: 20px;
+    padding-left: 11px;
+}
+
+input:focus {
+    border: 1px solid #b95334;
+}
+
+.topright {
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.topright img {
+    width: 50px;
+    position: relative;
+    left: 20px;
 }
 
 .headerBottom {
@@ -43,10 +77,81 @@ input {
     justify-content: space-between;
 }
 
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    bottom: 12px;
+}
+
+.intro span {
+    font-size: 15px;
+    font-weight:lighter;
+}
+
+.headerbuttons {
+    margin-right: 50px;
+    display: flex;
+    gap: 65px;
+    justify-content: center;
+}
+
+.headerbuttons button {
+    width: 80px;
+    height: 30px;
+    border-radius: 120px;
+    border: none;
+    background-color: #d35e3a;
+    color: white;
+    font-weight: bold;
+}
+
+.headerbuttons button:hover {
+    border: 1px solid #d35e3a;
+    background-color: white;
+    color: #d35e3a;
+    cursor: pointer;
+}
+
 .sidebar {
+    padding: 30px;
     grid-row: span 2;
     background-color: #b95334;
     color: white;
+}
+
+.sidebar div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0px;
+}
+
+.sidebar div:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.sidebar .dashboard:hover {
+    cursor: pointer;
+    transform: none;
+}
+
+.communities {
+    margin-bottom: 50px;
+}
+.dashboard {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.dashboard > svg {
+    width: 50px;
 }
 
 .cards {
